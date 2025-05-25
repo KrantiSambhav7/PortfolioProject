@@ -9,7 +9,7 @@ const Container = ({
   className?: string;
 }) => {
   return (
-    <div className={clsx('max-w-4xl mx-auto bg-white dark:bg-black p-4 md:p-10', className)}>
+    <div className={clsx('max-w-4xl w-full mx-auto bg-white dark:bg-black', className)}>
       {children}
     </div>
   );
