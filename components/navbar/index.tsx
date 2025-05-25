@@ -38,8 +38,8 @@ const Navbar = () => {
                 ease: "easeInOut"
             }
         }
-        className='fixed top-0  inset-x-0 max-w-4xl mx-auto flex items-center justify-between p-4'>
-            <Image className='h-10 w-10 object-cover rounded-full' src={"/Cartoon.jpg"} height={100} width={100} alt='Portfolio' />
+        className='fixed top-0  inset-x-0 max-w-4xl mx-auto flex items-center justify-between px-3 py-2 '>
+            <Image className='h-10 w-10 object-cover rounded-full' src={"/sign.png"} height={100} width={100} alt='Portfolio' />
             <div className='flex items-center'>
                 {navItems.map((item , idx) => (
                     <Link key={item.title} href={item.href} onMouseEnter={() => setHovered(idx)} onMouseLeave={() => setHovered(null)} className='text-sm text-gray-500 relative px-2 py-1'>
