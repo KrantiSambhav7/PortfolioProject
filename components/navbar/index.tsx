@@ -3,7 +3,7 @@ import React from 'react'
 import Container from "@/components/Container";
 import Image from 'next/image';
 import Link from 'next/link';
-import {motion} from 'framer-motion';
+import {motion, useMotionValueEvent, useScroll} from 'framer-motion';
 
 const Navbar = () => {
     const navItems = [
@@ -13,9 +13,32 @@ const Navbar = () => {
         {title: "Blog", href: "/blog"},
     ]
     const [hovered , setHovered] = React.useState<number | null>(null);
+    const {scrollY} = useScroll();
+    const [scrolled , setScrolled] = React.useState<boolean>(false);
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        if(latest > 20){
+            setScrolled(true)
+        } else{
+            setScrolled(false)
+        }
+    });
   return (
     <Container>
-        <nav className='flex items-center justify-between p-4'>
+        <motion.nav 
+        animate={
+            {
+                boxShadow: scrolled ? "var(--shadow-input)" : "none",
+                width: scrolled ? "60%" : "100%",
+                y: scrolled ? 10 : 0
+            }
+        }
+        transition={
+            {
+                duration: 0.3,
+                ease: "easeInOut"
+            }
+        }
+        className='fixed top-0  inset-x-0 max-w-4xl mx-auto flex items-center justify-between p-4'>
             <Image className='h-10 w-10 object-cover rounded-full' src={"/Cartoon.jpg"} height={100} width={100} alt='Portfolio' />
             <div className='flex items-center'>
                 {navItems.map((item , idx) => (
@@ -27,7 +50,7 @@ const Navbar = () => {
                     </Link>
                 ))}
             </div>
-        </nav>
+        </motion.nav>
     </Container>
   )
 }
