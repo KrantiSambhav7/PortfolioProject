@@ -28,7 +28,8 @@ const Navbar = () => {
             {
                 boxShadow: scrolled ? "var(--shadow-input)" : "none",
                 width: scrolled ? "80%" : "100%",
-                y: scrolled ? 10 : 0
+                y: scrolled ? 10 : 0,
+                opacity: scrolled ? 0.8 : 1
             }
         }
         transition={
@@ -37,14 +38,15 @@ const Navbar = () => {
                 ease: "easeInOut"
             }
         }
-        className='fixed top-0  inset-x-0 max-w-4xl mx-auto flex items-center justify-between px-3 py-2 z-10'>
+        className='fixed top-0 inset-x-0 max-w-4xl mx-auto flex items-center justify-between px-3 py-2 z-10 
+             backdrop-blur-md backdrop-saturate-150 bg-white/10 dark:bg-black/20 rounded-xl'>
             <Link href={"/"}>
                 <Image className='h-10 w-10 object-cover rounded-full' src={"/sign.png"} height={100} width={100} alt='Portfolio' />
             </Link>
             <div className='flex items-center'>
                 {navItems.map((item , idx) => (
-                    <Link key={item.title} href={item.href} onMouseEnter={() => setHovered(idx)} onMouseLeave={() => setHovered(null)} className='text-sm text-gray-500 relative px-2 py-1'>
-                        {hovered === idx &&  (<motion.span layoutId='hovered-span' className='h-full w-full absolute inset-0 rounded-md bg-neutral-100 dark:bg-neutral-300' />)}
+                    <Link key={item.title} href={item.href} onMouseEnter={() => setHovered(idx)} onMouseLeave={() => setHovered(null)} className='text-sm text-gray-300 relative px-2 py-1'>
+                        {hovered === idx &&  (<motion.span layoutId='hovered-span' className='h-full w-full absolute inset-0 rounded-md bg-neutral-100 dark:bg-neutral-600' />)}
                         <span className='relative z-10'>
                             {item.title}
                         </span>
