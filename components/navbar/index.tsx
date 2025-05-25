@@ -2,9 +2,8 @@
 import React from 'react'
 import Container from "@/components/Container";
 import Image from 'next/image';
-import Link from 'next/link';
 import {motion, useMotionValueEvent, useScroll} from 'framer-motion';
-
+import { Link } from 'next-view-transitions'
 const Navbar = () => {
     const navItems = [
         {title: "About" , href: "/about"},
