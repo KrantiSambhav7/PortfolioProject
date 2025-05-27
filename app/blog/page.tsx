@@ -6,6 +6,8 @@ import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import { Link } from 'next-view-transitions'
+import Heading from "@/components/Heading";
+import Subheading from "@/components/Subheading";
 
 export const metadata: Metadata = { // To rank good in search engines
   title: "All Blogs | Kranti Sambhav",
@@ -18,8 +20,9 @@ export default async function BlogsPage() {
   return (
     <div className="min-h-screen flex items-start justify-start">
       <Container className="min-h-screen p-4 md:pt-20 md:pb-10">
-        <h1 className="text-2xl md:text-4xl font-bold tracking-tight text-primary">All blogs </h1>
-        <p className="text-secondary text-sm md:text-sm pt-4 max-w-lg">Hello I am a software engineer with a passion for building scalable and efficient systems. I am currently a college student trying web development. </p>
+        <Heading>All blogs </Heading>
+        <Subheading>Hello I am a software engineer with a passion for building scalable and efficient systems. I am currently a college student trying web development. </Subheading>
+
         <div className="flex flex-col gap-4 py-10">
             {allBlog.map((blog , idx) => (
                 <Link className="flex gap-4" key={blog?.slug} href={`/blog/${blog?.slug}`}>

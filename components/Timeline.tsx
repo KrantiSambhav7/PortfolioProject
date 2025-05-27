@@ -76,10 +76,10 @@ const Timeline = () => {
 ]
 
   return (
-    <div className='text-primary py-8 text-sm'>
+    <div className='text-primary py-4 text-sm'>
         {data.map((item , idx) => (
-            <div key={item.title}>
-                <h2 className='font-bold text-primary dark:text-white'>{item.title}</h2>
+            <div key={item.title} className='py-4 '>
+                <h2 className='font-bold text-primary dark:text-white mb-2'>{item.title}</h2>
                 {item.content.map((cont , i) => (
                     <div key={i} className='pl-4'>
                         <h3>{cont.title}</h3>
