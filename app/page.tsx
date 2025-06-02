@@ -5,8 +5,6 @@ import Marquee from "@/components/Marquee";
 import Projects from "@/components/Projects";
 import Subheading from "@/components/Subheading";
 import Testimonial from "@/components/Testimonial";
-import { Inter } from "next/font/google";
-import Image from "next/image";
 
 
 export default function Home() {

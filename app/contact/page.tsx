@@ -1,10 +1,5 @@
 
 import Container from "@/components/Container";
-import Marquee from "@/components/Marquee";
-import Projects from "@/components/Projects";
-import { Inter } from "next/font/google";
-import Image from "next/image";
-import Timeline from "@/components/Timeline";
 import Heading from "@/components/Heading";
 import Subheading from "@/components/Subheading";
 import ContactForm from "@/components/ContactForm";

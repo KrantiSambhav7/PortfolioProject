@@ -3,9 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { ViewTransitions } from 'next-view-transitions'
-import { Link } from 'next-view-transitions'
 import Footer from "@/components/navbar/footer";
-import { Toaster, toast } from 'sonner';
+import { Toaster} from 'sonner';
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],

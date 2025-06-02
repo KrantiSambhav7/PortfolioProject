@@ -57,3 +57,8 @@ const getBlogFrontMatterBySlug = async (slug: string) => {
         return null;
     }
 }
+
+export async function getAllBlogSlugs() {
+  const files = fs.readdirSync(path.join(process.cwd(), "data/blogs"));
+  return files.map((file) => file.replace(/\.mdx?$/, ""));
+}
