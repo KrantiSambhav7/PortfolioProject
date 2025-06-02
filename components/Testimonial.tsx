@@ -42,7 +42,7 @@ const TestimonialCard = ({quote , name , avatar} : {
     name: string,
     avatar: string
 }) => {
-    return <div className='hover:shadow-lg shadow-cyan-100 flex flex-col justify-between mx-2 p-4 text-neutral-300 max-w-96 h-38 mb-4 border border-neutral-500 rounded-xl'>
+    return <div className='text-sm shadow-md hover:shadow-lg shadow-cyan-400 flex flex-col justify-between mx-2 p-4 text-neutral-300 max-w-96 h-38 mb-10 border border-neutral-500 rounded-xl'>
         <p>{quote}</p>
         <div className='flex items-center gap-4 '>
             <div className='h-6 w-6 rounded-full border border-white text-xs flex items-center justify-center'>{name.charAt(0).toUpperCase()}</div>
