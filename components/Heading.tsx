@@ -10,6 +10,7 @@ const Heading = ({as: Tag = "h1" , children} : {
     initial={{opacity: 0 , y: 10 , filter: "blur(10px)"}}
     whileInView={{opacity: 1 , y: 0 , filter: "blur(0px)"}}
     transition={{duration: 0.5, ease: "easeInOut"}}
+    viewport={{once: true}}
     >
         <Tag className="text-2xl md:text-4xl font-bold tracking-tighter  text-primary">{children   }</Tag>
     </motion.div>

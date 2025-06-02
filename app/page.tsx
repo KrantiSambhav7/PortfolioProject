@@ -4,6 +4,7 @@ import Heading from "@/components/Heading";
 import Marquee from "@/components/Marquee";
 import Projects from "@/components/Projects";
 import Subheading from "@/components/Subheading";
+import Testimonial from "@/components/Testimonial";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 
@@ -15,6 +16,7 @@ export default function Home() {
         <Heading>Kranti Sambhav</Heading>
         <Subheading>Hello I am a software engineer with a passion for building scalable and efficient systems. I am currently a college student trying web development. </Subheading>
         <Projects />
+        <Testimonial />
         <Marquee />
       </Container>
     </div>
